@@ -134,11 +134,11 @@ bm25_retriever_text.k = 50
 bm25_retriever_table = KiwiBM25Retriever.from_documents(splitted_doc_table)
 bm25_retriever_table.k = 20
 
-# 유틸리티 함수들 (기존 코드 유지)
+# 유틸리티 함수들
 def adjust_time_filter_to_week(time_filter):
     start_date = time_filter.start_date
     end_date = time_filter.end_date
-
+    
     if start_date is None or end_date is None:
         if start_date is not None and end_date is None:
             start_of_week = start_date - timedelta(days=start_date.weekday())
@@ -184,7 +184,7 @@ def format_docs(docs):
         for doc in docs
     )
 
-# LangGraph 노드 함수들
+# LangGraph 노드 함수들 (HyperCLOVA X 최적화 프롬프트 적용)
 def extract_date_node(state: AgentState) -> AgentState:
     """날짜 추출 노드"""
     question = state["question"]
@@ -194,18 +194,25 @@ def extract_date_node(state: AgentState) -> AgentState:
     issue_date = last_friday.strftime("%Y-%m-%d")
 
     system_prompt = f"""
-    You are an AI assistant that extracts date ranges from financial queries.
-    The current report date is {issue_date}.
-    Your task is to extract the relevant date or date range from the user's query
-    and format it in YYYY-MM-DD format.
-    If no date is specified, answer with None value.
-    Return your answer as a JSON object in this format:
-    {{
-        "query": "<원본 질문>",
-        "time_filter": {{"start_date": "YYYY-MM-DD", "end_date": "YYYY-MM-DD"}} or {{"start_date": null, "end_date": null}}
-    }}
-    답변은 반드시 위 JSON 형태로만 해.
-    """
+당신은 금융 질의에서 날짜 범위를 추출하는 AI 어시스턴트입니다.
+현재 리포트 날짜는 {issue_date}입니다.
+
+**작업 지시:**
+1. 사용자 질문에서 관련 날짜 또는 날짜 범위를 추출하세요
+2. YYYY-MM-DD 형식으로 변환하세요
+3. 날짜가 명시되지 않은 경우 null 값으로 응답하세요
+
+**출력 형식:**
+반드시 아래 JSON 형태로만 응답하세요:
+{{
+    "query": "원본 질문",
+    "time_filter": {{"start_date": "YYYY-MM-DD", "end_date": "YYYY-MM-DD"}} 또는 {{"start_date": null, "end_date": null}}
+}}
+
+**예시:**
+- 질문: "이번 주 채권 시장 동향은?"
+- 응답: {{"query": "이번 주 채권 시장 동향은?", "time_filter": {{"start_date": "2025-01-20", "end_date": "2025-01-26"}}}}
+"""
 
     messages = [
         {"role": "system", "content": system_prompt},
@@ -230,13 +237,21 @@ def routing_node(state: AgentState) -> AgentState:
     question = state["question"]
     
     prompt = PromptTemplate.from_template(
-        '''주어진 사용자 질문을 `요약`, `예측`, 또는 `일반` 중 하나로 분류하세요. 한 단어 이상으로 응답하지 마세요.
-        
-        <question>
-        {question}
-        </question>
-        
-        Classification:'''
+        '''다음 사용자 질문을 정확히 분류하세요.
+
+**분류 기준:**
+- 요약: 특정 기간의 내용을 종합하거나 정리하는 질문
+- 예측: 미래 전망이나 예상에 관한 질문  
+- 일반: 특정 정보나 사실을 묻는 질문
+
+**질문:**
+{question}
+
+**지시사항:**
+- 반드시 "요약", "예측", "일반" 중 하나의 단어로만 응답하세요
+- 다른 설명은 추가하지 마세요
+
+분류:'''
     )
     
     messages = [{"role": "user", "content": prompt.format(question=question)}]
@@ -249,13 +264,20 @@ def routing_2_node(state: AgentState) -> AgentState:
     question = state["question"]
     
     prompt = PromptTemplate.from_template(
-        '''주어진 사용자 질문을 `날짜`, `호수` 중 하나로 분류하세요. 한 단어 이상으로 응답하지 마세요.
-        
-        <question>
-        {question}
-        </question>
-        
-        Classification:'''
+        '''다음 사용자 질문의 검색 방식을 분류하세요.
+
+**분류 기준:**
+- 날짜: 특정 날짜나 기간을 기준으로 검색하는 질문
+- 호수: 특정 호수나 발행 번호를 기준으로 검색하는 질문
+
+**질문:**
+{question}
+
+**지시사항:**
+- 반드시 "날짜" 또는 "호수" 중 하나의 단어로만 응답하세요
+- 다른 설명은 추가하지 마세요
+
+분류:'''
     )
     
     messages = [{"role": "user", "content": prompt.format(question=question)}]
@@ -353,18 +375,21 @@ def text_answer_node(state: AgentState) -> AgentState:
     context = state["text_context"]
     
     text_prompt = PromptTemplate.from_template(
-        '''today is '2025-01-25'. You are an assistant for question-answering tasks.
-        Use the following pieces of retrieved context to answer the question.
-        If you don't know the answer, just say that you don't know.
-        If question has date expressions, context already filtered with the date expression, so ignore about the date and answer without it.
-        Answer in Korean. Answer in detail.
+        '''오늘은 2025년 1월 25일입니다. 당신은 금융 리포트 질의응답 전문 어시스턴트입니다.
 
-        #Question:
-        {question}
-        #Context:
-        {context}
+**작업 지시:**
+1. 제공된 검색 결과를 바탕으로 질문에 상세히 답변하세요
+2. 답변할 수 없는 경우 "해당 정보를 찾을 수 없습니다"라고 명확히 말하세요
+3. 질문에 날짜 표현이 있어도 이미 필터링된 결과이므로 날짜는 무시하고 답변하세요
+4. 한국어로 자세하고 구체적으로 설명하세요
 
-        #Answer:'''
+**질문:**
+{question}
+
+**검색 결과:**
+{context}
+
+**답변:**'''
     )
     
     formatted_context = format_docs(context)
@@ -379,17 +404,21 @@ def table_answer_node(state: AgentState) -> AgentState:
     context = state["table_context"]
     
     table_prompt = PromptTemplate.from_template(
-        '''You are an assistant for question-answering tasks.
-        Use the following pieces of retrieved table to answer the question.
-        If you don't know the answer, just say that you don't know.
-        Answer in Korean. Answer in detail.
+        '''당신은 금융 데이터 분석 전문 어시스턴트입니다.
 
-        #Question:
-        {question}
-        #Context:
-        {context}
+**작업 지시:**
+1. 제공된 테이블 데이터를 정확히 분석하여 질문에 답변하세요
+2. 숫자나 데이터는 정확히 인용하세요
+3. 답변할 수 없는 경우 "해당 정보를 찾을 수 없습니다"라고 명확히 말하세요
+4. 한국어로 상세하고 체계적으로 설명하세요
 
-        #Answer:'''
+**질문:**
+{question}
+
+**테이블 데이터:**
+{context}
+
+**답변:**'''
     )
     
     formatted_context = format_docs(context)
@@ -404,19 +433,27 @@ def raptor_answer_node(state: AgentState) -> AgentState:
     context = state["raptor_context"]
     
     raptor_prompt = PromptTemplate.from_template(
-        '''You are an assistant for question-answering tasks.
-        Use the following pieces of retrieved context to answer the question.
-        If you don't know the answer, just say that you don't know.
-        Answer in Korean. Answer in detail.
-        If the context mentions an unrelated date, do not mention that part.
-        Summarize and organize your answers based on the various issues that apply to the period.
+        '''당신은 금융 리포트 요약 전문 어시스턴트입니다.
 
-        #Question:
-        {question}
-        #Context:
-        {context}
+**작업 지시:**
+1. 제공된 검색 결과를 바탕으로 질문에 체계적으로 답변하세요
+2. 관련 없는 날짜 정보는 언급하지 마세요
+3. 해당 기간에 적용되는 다양한 이슈들을 기준으로 답변을 요약하고 정리하세요
+4. 답변할 수 없는 경우 "해당 정보를 찾을 수 없습니다"라고 명확히 말하세요
+5. 한국어로 상세하고 논리적으로 설명하세요
 
-        #Answer:'''
+**답변 구성:**
+- 주요 이슈별로 분류하여 설명
+- 각 이슈의 핵심 내용과 영향 분석
+- 전체적인 종합 의견 제시
+
+**질문:**
+{question}
+
+**검색 결과:**
+{context}
+
+**답변:**'''
     )
     
     formatted_context = format_docs(context)
@@ -432,21 +469,29 @@ def general_answer_node(state: AgentState) -> AgentState:
     table_answer = state["table_answer"]
     
     general_prompt = PromptTemplate.from_template(
-        '''You are question-answering AI chatbot about financial reports.
-        주어진 두 개의 정보는 table과 text에서 가져온 정보들이야. 이 정보를 바탕으로 질문에 대해 자세히 설명해줘.
-        
-        If one of the table or text says it doesn't know or it can't answer, don't mention with that.
-        And some questions may not be answered simply with context, but rather require inference. In those cases, answer by inference. 
-        
-        #Question:
-        {question}
+        '''당신은 금융 리포트 전문 AI 챗봇입니다.
 
-        #Text Answer:
-        {text}
+**작업 지시:**
+1. 텍스트와 테이블에서 가져온 두 정보를 종합하여 질문에 상세히 답변하세요
+2. 한쪽 정보가 "모른다"고 하면 해당 부분은 언급하지 마세요
+3. 단순한 정보 제공이 아닌 추론이 필요한 질문의 경우 논리적으로 추론하여 답변하세요
+4. 한국어로 전문적이고 신뢰성 있게 설명하세요
 
-        #Table Answer:
-        {table}
-        '''
+**답변 구성:**
+- 핵심 내용 요약
+- 세부 분석 및 설명
+- 결론 및 시사점
+
+**질문:**
+{question}
+
+**텍스트 정보:**
+{text}
+
+**테이블 정보:**
+{table}
+
+**종합 답변:**'''
     )
     
     messages = [{"role": "user", "content": general_prompt.format(question=question, text=text_answer, table=table_answer)}]
@@ -481,27 +526,33 @@ def should_use_date_routing(state: AgentState) -> str:
 def create_langgraph_agent():
     """LangGraph 에이전트 생성"""
     
-    # StateGraph 초기화
     workflow = StateGraph(AgentState)
     
-    # 노드 추가
+    # 노드 추가 (상태 키와 다른 이름 사용)
     workflow.add_node("extract_date", extract_date_node)
     workflow.add_node("routing", routing_node)
     workflow.add_node("routing_2", routing_2_node)
     workflow.add_node("text_retrieval", text_retrieval_node)
     workflow.add_node("table_retrieval", table_retrieval_node)
     workflow.add_node("raptor_retrieval", raptor_retrieval_node)
-    workflow.add_node("text_answer", text_answer_node)
-    workflow.add_node("table_answer", table_answer_node)
-    workflow.add_node("raptor_answer", raptor_answer_node)
-    workflow.add_node("general_answer", general_answer_node)
-    workflow.add_node("predict_answer", predict_answer_node)
+    workflow.add_node("text_answer_node", text_answer_node)
+    workflow.add_node("table_answer_node", table_answer_node)
+    workflow.add_node("raptor_answer_node", raptor_answer_node)
+    workflow.add_node("general_answer_node", general_answer_node)
+    workflow.add_node("predict_answer_node", predict_answer_node)
+
+    def choose_final_answer(state: AgentState) -> str:
+        """라우팅 결과에 따른 최종 답변 노드 선택"""
+        routing_result = state.get("routing_result", "").lower()
+        if '예측' in routing_result:
+            return "predict_answer"
+        else:
+            return "general_answer"
     
-    # 시작점 설정
+    # 엣지 연결
     workflow.add_edge(START, "extract_date")
     workflow.add_edge("extract_date", "routing")
     
-    # 조건부 엣지 추가
     workflow.add_conditional_edges(
         "routing",
         should_use_summary,
@@ -512,7 +563,6 @@ def create_langgraph_agent():
         }
     )
     
-    # 요약 경로
     workflow.add_conditional_edges(
         "routing_2",
         should_use_date_routing,
@@ -521,35 +571,25 @@ def create_langgraph_agent():
         }
     )
     
-    workflow.add_edge("raptor_retrieval", "raptor_answer")
-    workflow.add_edge("raptor_answer", END)
+    workflow.add_edge("raptor_retrieval", "raptor_answer_node")
+    workflow.add_edge("raptor_answer_node", END)
     
-    # 일반/예측 경로
     workflow.add_edge("text_retrieval", "table_retrieval")
-    workflow.add_edge("table_retrieval", "text_answer")
-    workflow.add_edge("text_answer", "table_answer")
-    
-    # 라우팅 결과에 따른 최종 답변 노드 선택
-    def choose_final_answer(state: AgentState) -> str:
-        routing_result = state.get("routing_result", "").lower()
-        if '예측' in routing_result:
-            return "predict_answer"
-        else:
-            return "general_answer"
+    workflow.add_edge("table_retrieval", "text_answer_node")
+    workflow.add_edge("text_answer_node", "table_answer_node")
     
     workflow.add_conditional_edges(
-        "table_answer",
+        "table_answer_node",
         choose_final_answer,
         {
-            "predict_answer": "predict_answer",
-            "general_answer": "general_answer"
+            "predict_answer": "predict_answer_node",
+            "general_answer": "general_answer_node"
         }
     )
     
-    workflow.add_edge("general_answer", END)
-    workflow.add_edge("predict_answer", END)
+    workflow.add_edge("general_answer_node", END)
+    workflow.add_edge("predict_answer_node", END)
     
-    # 그래프 컴파일
     return workflow.compile()
 
 # 사용 예시
