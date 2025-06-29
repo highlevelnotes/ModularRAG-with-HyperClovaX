@@ -1,0 +1,173 @@
+2025-06-25 22:59:46,798 - __main__ - INFO - 1단계: ETF 목록 수집 및 필터링
+2025-06-25 22:59:46,798 - src.collector.etf_collector - INFO - 종합 ETF 목록 수집 시작...
+2025-06-25 22:59:46,799 - src.collector.etf_collector - INFO - 네이버 금융에서 ETF 목록 수집 중...
+2025-06-25 22:59:46,903 - src.collector.etf_collector - INFO - 네이버에서 990개 ETF 수집 완료
+2025-06-25 22:59:46,904 - src.collector.etf_collector - INFO - 퇴직연금 투자 가능 ETF 필터링 중...
+2025-06-25 22:59:46,947 - src.collector.etf_collector - INFO - 퇴직연금 투자 가능 ETF: 86개
+2025-06-25 22:59:46,966 - __main__ - INFO - 퇴직연금 투자 가능 ETF 목록 저장: data/raw/pension_eligible_etfs.csv
+2025-06-25 22:59:46,966 - __main__ - INFO - 테스트용으로 50개 ETF로 제한
+2025-06-25 22:59:46,967 - __main__ - INFO - 2단계: ETF 가격 데이터 수집
+2025-06-25 22:59:46,967 - src.collector.data_processor - INFO - 50개 ETF 가격 데이터 수집 시작...
+2025-06-25 22:59:46,970 - src.collector.data_processor - INFO - 310970 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:47,128 - src.collector.data_processor - INFO - 310970: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:47,245 - src.collector.data_processor - INFO - 102780 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:47,341 - src.collector.data_processor - INFO - 102780: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:47,442 - src.collector.data_processor - INFO - 229200 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:47,543 - src.collector.data_processor - INFO - 229200: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:47,644 - src.collector.data_processor - INFO - 411060 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:47,699 - src.collector.data_processor - INFO - 411060: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:47,799 - src.collector.data_processor - INFO - 466920 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:47,843 - src.collector.data_processor - INFO - 466920: 418개 데이터 포인트 수집 성공
+2025-06-25 22:59:47,945 - src.collector.data_processor - INFO - 491080 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:48,006 - src.collector.data_processor - WARNING - 491080: 데이터 부족 (최소 252개 필요)
+2025-06-25 22:59:48,108 - src.collector.data_processor - INFO - 278540 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:48,177 - src.collector.data_processor - INFO - 278540: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:48,278 - src.collector.data_processor - INFO - 226490 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:48,386 - src.collector.data_processor - INFO - 226490: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:48,487 - src.collector.data_processor - INFO - 466940 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:48,637 - src.collector.data_processor - INFO - 466940: 411개 데이터 포인트 수집 성공
+2025-06-25 22:59:48,738 - src.collector.data_processor - INFO - 0061Z0 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:49,018 - src.collector.data_processor - WARNING - FinanceDataReader 실패 (0061Z0): 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v8/finance/chart/0061Z0?period1=1656169200&period2=1750777200&interval=1d&includeAdjustedClose=true
+2025-06-25 22:59:52,135 - src.collector.data_processor - WARNING - yfinance 실패 (0061Z0): ['close_price']
+2025-06-25 22:59:52,136 - src.collector.data_processor - ERROR - 0061Z0 데이터 수집 완전 실패
+2025-06-25 22:59:52,136 - src.collector.data_processor - WARNING - 0061Z0: 데이터 부족 (최소 252개 필요)
+2025-06-25 22:59:52,238 - src.collector.data_processor - INFO - 091170 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:52,337 - src.collector.data_processor - INFO - 091170: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:52,439 - src.collector.data_processor - INFO - 476800 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:52,499 - src.collector.data_processor - INFO - 476800: 317개 데이터 포인트 수집 성공
+2025-06-25 22:59:52,600 - src.collector.data_processor - INFO - 494670 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:52,646 - src.collector.data_processor - WARNING - 494670: 데이터 부족 (최소 252개 필요)
+2025-06-25 22:59:52,747 - src.collector.data_processor - INFO - 102970 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:52,889 - src.collector.data_processor - INFO - 102970: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:52,990 - src.collector.data_processor - INFO - 395270 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:53,041 - src.collector.data_processor - INFO - 395270: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:53,142 - src.collector.data_processor - INFO - 138520 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:53,235 - src.collector.data_processor - INFO - 138520: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:53,336 - src.collector.data_processor - INFO - 277630 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:53,457 - src.collector.data_processor - INFO - 277630: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:53,558 - src.collector.data_processor - INFO - 232080 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:53,640 - src.collector.data_processor - INFO - 232080: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:53,741 - src.collector.data_processor - INFO - 302450 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:53,843 - src.collector.data_processor - INFO - 302450: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:53,944 - src.collector.data_processor - INFO - 492500 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:53,984 - src.collector.data_processor - WARNING - 492500: 데이터 부족 (최소 252개 필요)
+2025-06-25 22:59:54,085 - src.collector.data_processor - INFO - 441800 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:54,194 - src.collector.data_processor - INFO - 441800: 670개 데이터 포인트 수집 성공
+2025-06-25 22:59:54,295 - src.collector.data_processor - INFO - 213610 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:54,872 - src.collector.data_processor - INFO - 213610: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:54,973 - src.collector.data_processor - INFO - 489570 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:55,013 - src.collector.data_processor - WARNING - 489570: 데이터 부족 (최소 252개 필요)
+2025-06-25 22:59:55,114 - src.collector.data_processor - INFO - 270810 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:55,239 - src.collector.data_processor - INFO - 270810: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:55,341 - src.collector.data_processor - INFO - 448330 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:55,388 - src.collector.data_processor - INFO - 448330: 627개 데이터 포인트 수집 성공
+2025-06-25 22:59:55,489 - src.collector.data_processor - INFO - 237350 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:55,584 - src.collector.data_processor - INFO - 237350: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:55,686 - src.collector.data_processor - INFO - 441540 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:55,734 - src.collector.data_processor - INFO - 441540: 678개 데이터 포인트 수집 성공
+2025-06-25 22:59:55,836 - src.collector.data_processor - INFO - 138540 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:55,979 - src.collector.data_processor - INFO - 138540: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:56,080 - src.collector.data_processor - INFO - 395290 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:56,131 - src.collector.data_processor - INFO - 395290: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:56,232 - src.collector.data_processor - INFO - 385720 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:56,288 - src.collector.data_processor - INFO - 385720: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:56,389 - src.collector.data_processor - INFO - 117700 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:56,559 - src.collector.data_processor - INFO - 117700: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:56,660 - src.collector.data_processor - INFO - 403790 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:56,802 - src.collector.data_processor - INFO - 403790: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:56,903 - src.collector.data_processor - INFO - 139220 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:57,005 - src.collector.data_processor - INFO - 139220: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:57,106 - src.collector.data_processor - INFO - 359210 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:57,158 - src.collector.data_processor - INFO - 359210: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:57,259 - src.collector.data_processor - INFO - 469170 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:57,299 - src.collector.data_processor - INFO - 469170: 411개 데이터 포인트 수집 성공
+2025-06-25 22:59:57,400 - src.collector.data_processor - INFO - 0072R0 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:57,659 - src.collector.data_processor - WARNING - FinanceDataReader 실패 (0072R0): 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v8/finance/chart/0072R0?period1=1656169200&period2=1750777200&interval=1d&includeAdjustedClose=true
+2025-06-25 22:59:58,172 - yfinance - ERROR - 
+1 Failed download:
+2025-06-25 22:59:58,172 - yfinance - ERROR - ['0072R0.KS']: YFPricesMissingError('possibly delisted; no price data found  (1d 2022-06-26 -> 2025-06-25)')
+2025-06-25 22:59:58,174 - src.collector.data_processor - ERROR - 0072R0 데이터 수집 완전 실패
+2025-06-25 22:59:58,175 - src.collector.data_processor - WARNING - 0072R0: 데이터 부족 (최소 252개 필요)
+2025-06-25 22:59:58,276 - src.collector.data_processor - INFO - 445150 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:58,327 - src.collector.data_processor - INFO - 445150: 637개 데이터 포인트 수집 성공
+2025-06-25 22:59:58,428 - src.collector.data_processor - INFO - 108450 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:58,606 - src.collector.data_processor - INFO - 108450: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:58,708 - src.collector.data_processor - INFO - 210780 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:58,820 - src.collector.data_processor - INFO - 210780: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:58,923 - src.collector.data_processor - INFO - 332940 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:59,013 - src.collector.data_processor - INFO - 332940: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:59,115 - src.collector.data_processor - INFO - 157500 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:59,291 - src.collector.data_processor - INFO - 157500: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:59,394 - src.collector.data_processor - INFO - 368190 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:59,472 - src.collector.data_processor - INFO - 368190: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:59,573 - src.collector.data_processor - INFO - 298770 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:59,637 - src.collector.data_processor - INFO - 298770: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:59,737 - src.collector.data_processor - INFO - 140700 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 22:59:59,840 - src.collector.data_processor - INFO - 140700: 733개 데이터 포인트 수집 성공
+2025-06-25 22:59:59,941 - src.collector.data_processor - INFO - 354500 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 23:00:00,088 - src.collector.data_processor - INFO - 354500: 733개 데이터 포인트 수집 성공
+2025-06-25 23:00:00,189 - src.collector.data_processor - INFO - 438900 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 23:00:00,241 - src.collector.data_processor - INFO - 438900: 697개 데이터 포인트 수집 성공
+2025-06-25 23:00:00,344 - src.collector.data_processor - INFO - 479850 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 23:00:00,414 - src.collector.data_processor - INFO - 479850: 288개 데이터 포인트 수집 성공
+2025-06-25 23:00:00,515 - src.collector.data_processor - INFO - 450910 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 23:00:00,565 - src.collector.data_processor - INFO - 450910: 585개 데이터 포인트 수집 성공
+2025-06-25 23:00:00,667 - src.collector.data_processor - INFO - 292190 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 23:00:00,735 - src.collector.data_processor - INFO - 292190: 733개 데이터 포인트 수집 성공
+2025-06-25 23:00:00,836 - src.collector.data_processor - INFO - 261070 가격 데이터 수집 중... (2022-06-26 ~ 2025-06-25)
+2025-06-25 23:00:00,946 - src.collector.data_processor - INFO - 261070: 733개 데이터 포인트 수집 성공
+2025-06-25 23:00:01,047 - src.collector.data_processor - INFO - 가격 데이터 수집 완료: 성공 44개, 실패 6개
+2025-06-25 23:00:01,047 - src.collector.data_processor - WARNING - 실패한 ETF: ['491080', '0061Z0', '494670', '492500', '489570', '0072R0']
+2025-06-25 23:00:01,478 - __main__ - INFO - 가격 데이터 저장 완료: 44개 ETF
+2025-06-25 23:00:01,479 - __main__ - INFO - 3단계: Time-LLM 형식 변환
+2025-06-25 23:00:01,479 - src.collector.time_llm_converter - INFO - Time-LLM 형식으로 데이터 변환 시작...
+2025-06-25 23:00:01,723 - src.collector.time_llm_converter - INFO - 310970: 694개 샘플 생성
+2025-06-25 23:00:01,937 - src.collector.time_llm_converter - INFO - 102780: 694개 샘플 생성
+2025-06-25 23:00:02,153 - src.collector.time_llm_converter - INFO - 229200: 694개 샘플 생성
+2025-06-25 23:00:02,359 - src.collector.time_llm_converter - INFO - 411060: 694개 샘플 생성
+2025-06-25 23:00:02,471 - src.collector.time_llm_converter - INFO - 466920: 379개 샘플 생성
+2025-06-25 23:00:02,693 - src.collector.time_llm_converter - INFO - 278540: 694개 샘플 생성
+2025-06-25 23:00:02,921 - src.collector.time_llm_converter - INFO - 226490: 694개 샘플 생성
+2025-06-25 23:00:03,033 - src.collector.time_llm_converter - INFO - 466940: 372개 샘플 생성
+2025-06-25 23:00:03,244 - src.collector.time_llm_converter - INFO - 091170: 694개 샘플 생성
+2025-06-25 23:00:03,327 - src.collector.time_llm_converter - INFO - 476800: 278개 샘플 생성
+2025-06-25 23:00:03,532 - src.collector.time_llm_converter - INFO - 102970: 694개 샘플 생성
+2025-06-25 23:00:03,739 - src.collector.time_llm_converter - INFO - 395270: 694개 샘플 생성
+2025-06-25 23:00:03,947 - src.collector.time_llm_converter - INFO - 138520: 694개 샘플 생성
+2025-06-25 23:00:04,156 - src.collector.time_llm_converter - INFO - 277630: 694개 샘플 생성
+2025-06-25 23:00:04,373 - src.collector.time_llm_converter - INFO - 232080: 694개 샘플 생성
+2025-06-25 23:00:04,585 - src.collector.time_llm_converter - INFO - 302450: 694개 샘플 생성
+2025-06-25 23:00:04,802 - src.collector.time_llm_converter - INFO - 441800: 631개 샘플 생성
+2025-06-25 23:00:05,027 - src.collector.time_llm_converter - INFO - 213610: 694개 샘플 생성
+2025-06-25 23:00:05,283 - src.collector.time_llm_converter - INFO - 270810: 694개 샘플 생성
+2025-06-25 23:00:05,456 - src.collector.time_llm_converter - INFO - 448330: 588개 샘플 생성
+2025-06-25 23:00:05,656 - src.collector.time_llm_converter - INFO - 237350: 694개 샘플 생성
+2025-06-25 23:00:05,838 - src.collector.time_llm_converter - INFO - 441540: 639개 샘플 생성
+2025-06-25 23:00:06,051 - src.collector.time_llm_converter - INFO - 138540: 694개 샘플 생성
+2025-06-25 23:00:06,268 - src.collector.time_llm_converter - INFO - 395290: 694개 샘플 생성
+2025-06-25 23:00:06,479 - src.collector.time_llm_converter - INFO - 385720: 694개 샘플 생성
+2025-06-25 23:00:06,687 - src.collector.time_llm_converter - INFO - 117700: 694개 샘플 생성
+2025-06-25 23:00:06,920 - src.collector.time_llm_converter - INFO - 403790: 694개 샘플 생성
+2025-06-25 23:00:07,135 - src.collector.time_llm_converter - INFO - 139220: 694개 샘플 생성
+2025-06-25 23:00:07,343 - src.collector.time_llm_converter - INFO - 359210: 694개 샘플 생성
+2025-06-25 23:00:07,454 - src.collector.time_llm_converter - INFO - 469170: 372개 샘플 생성
+2025-06-25 23:00:07,633 - src.collector.time_llm_converter - INFO - 445150: 598개 샘플 생성
+2025-06-25 23:00:07,834 - src.collector.time_llm_converter - INFO - 108450: 694개 샘플 생성
+2025-06-25 23:00:08,054 - src.collector.time_llm_converter - INFO - 210780: 694개 샘플 생성
+2025-06-25 23:00:08,260 - src.collector.time_llm_converter - INFO - 332940: 694개 샘플 생성
+2025-06-25 23:00:08,468 - src.collector.time_llm_converter - INFO - 157500: 694개 샘플 생성
+2025-06-25 23:00:08,673 - src.collector.time_llm_converter - INFO - 368190: 694개 샘플 생성
+2025-06-25 23:00:08,875 - src.collector.time_llm_converter - INFO - 298770: 694개 샘플 생성
+2025-06-25 23:00:09,101 - src.collector.time_llm_converter - INFO - 140700: 694개 샘플 생성
+2025-06-25 23:00:09,330 - src.collector.time_llm_converter - INFO - 354500: 694개 샘플 생성
+2025-06-25 23:00:09,541 - src.collector.time_llm_converter - INFO - 438900: 658개 샘플 생성
+2025-06-25 23:00:09,615 - src.collector.time_llm_converter - INFO - 479850: 249개 샘플 생성
+2025-06-25 23:00:09,798 - src.collector.time_llm_converter - INFO - 450910: 546개 샘플 생성
+2025-06-25 23:00:10,006 - src.collector.time_llm_converter - INFO - 292190: 694개 샘플 생성
+2025-06-25 23:00:10,217 - src.collector.time_llm_converter - INFO - 261070: 694개 샘플 생성
+2025-06-25 23:00:10,217 - src.collector.time_llm_converter - INFO - Time-LLM 형식 변환 완료: 총 28212개 샘플
+2025-06-25 23:00:11,056 - __main__ - INFO - Time-LLM 학습 데이터 저장: data/time_llm_format/time_llm_training_data.json
+2025-06-25 23:00:11,057 - __main__ - INFO - 4단계: HyperClova X 파인튜닝 형식 생성
+2025-06-25 23:00:11,057 - src.collector.time_llm_converter - INFO - HyperClova X 파인튜닝 형식으로 변환 중...
+2025-06-25 23:00:11,066 - src.collector.time_llm_converter - INFO - HyperClova X 형식 변환 완료: 28212개 샘플
+2025-06-25 23:00:11,416 - __main__ - INFO - HyperClova X 튜닝 데이터 저장: data/time_llm_format/hyperclova_x_tuning_data.json

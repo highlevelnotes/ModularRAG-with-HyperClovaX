@@ -1,0 +1,36 @@
+2025-06-25 23:36:28,737 - __main__ - INFO - 1단계: LangChain 데이터 처리기 초기화
+2025-06-25 23:36:28,737 - __main__ - INFO - 2단계: LangChain 튜닝 데이터 준비
+2025-06-25 23:36:28,738 - src.langchain_integration.time_llm_data_processor - INFO - LangChain 튜닝 데이터 준비 중: data/time_llm_format/hyperclova_x_tuning_data.json
+2025-06-25 23:36:29,314 - src.langchain_integration.time_llm_data_processor - INFO - LangChain 튜닝 데이터 준비 완료: 67855개 샘플
+2025-06-25 23:36:29,318 - __main__ - INFO - 3단계: LangChain 튜닝 파일 저장
+2025-06-25 23:36:30,550 - src.langchain_integration.time_llm_data_processor - INFO - LangChain 튜닝 파일 저장 완료: data/langchain_tuning/time_llm_tuning_20250625_233629.jsonl
+2025-06-25 23:36:30,551 - __main__ - INFO - 4단계: LangChain 튜닝 클라이언트 초기화
+2025-06-25 23:36:30,551 - src.langchain_integration.hyperclova_tuning_client - INFO - LangChain HyperClova X 튜닝 클라이언트 초기화 완료
+2025-06-25 23:36:30,552 - __main__ - INFO - 5단계: 튜닝 파일 업로드
+2025-06-25 23:36:30,552 - src.langchain_integration.hyperclova_tuning_client - INFO - 튜닝 파일 업로드 시작: data/langchain_tuning/time_llm_tuning_20250625_233629.jsonl
+2025-06-25 23:36:30,553 - src.langchain_integration.hyperclova_tuning_client - INFO - 작동하는 API 엔드포인트 탐색 중...
+2025-06-25 23:36:31,057 - src.langchain_integration.hyperclova_tuning_client - INFO - 작동하는 엔드포인트 발견: https://clovastudio.stream.ntruss.com/tuning/v1/files
+2025-06-25 23:36:35,891 - src.langchain_integration.hyperclova_tuning_client - ERROR - 파일 업로드 오류: 파일 업로드 실패: 403 - {"status":{"code":"40300","message":"Forbidden"}}
+2025-06-25 23:36:35,891 - src.langchain_integration.hyperclova_tuning_client - INFO - 수동으로 모든 가능한 API 경로 시도 중...
+2025-06-25 23:36:35,891 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.apigw.ntruss.com/tuning/v1/files
+2025-06-25 23:36:40,134 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.apigw.ntruss.com/tuning/v3/files
+2025-06-25 23:36:44,375 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.apigw.ntruss.com/tuning/files
+2025-06-25 23:36:48,809 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.apigw.ntruss.com/files
+2025-06-25 23:36:53,498 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.apigw.ntruss.com/api/tuning/v2/files
+2025-06-25 23:36:58,350 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.apigw.ntruss.com/api/tuning/files
+2025-06-25 23:37:02,764 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.apigw.ntruss.com/testapp/v1/tuning/files
+2025-06-25 23:37:07,094 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.stream.ntruss.com/tuning/v1/files
+2025-06-25 23:37:11,477 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.stream.ntruss.com/tuning/v3/files
+2025-06-25 23:37:15,846 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.stream.ntruss.com/tuning/files
+2025-06-25 23:37:20,247 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.stream.ntruss.com/files
+2025-06-25 23:37:24,629 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.stream.ntruss.com/api/tuning/v2/files
+2025-06-25 23:37:28,949 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.stream.ntruss.com/api/tuning/files
+2025-06-25 23:37:33,329 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.stream.ntruss.com/testapp/v1/tuning/files
+2025-06-25 23:37:37,608 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.ntruss.com/tuning/v1/files
+2025-06-25 23:37:37,674 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.ntruss.com/tuning/v3/files
+2025-06-25 23:37:37,715 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.ntruss.com/tuning/files
+2025-06-25 23:37:37,758 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.ntruss.com/files
+2025-06-25 23:37:37,791 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.ntruss.com/api/tuning/v2/files
+2025-06-25 23:37:37,834 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.ntruss.com/api/tuning/files
+2025-06-25 23:37:37,866 - src.langchain_integration.hyperclova_tuning_client - INFO - 시도 중: https://clovastudio.ntruss.com/testapp/v1/tuning/files
+2025-06-25 23:37:37,900 - __main__ - ERROR - LangChain 파인튜닝 과정 중 오류 발생: 모든 가능한 API 경로에서 파일 업로드 실패. API 문서를 확인하거나 네이버 클라우드 지원팀에 문의하세요.

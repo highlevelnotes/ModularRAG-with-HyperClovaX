@@ -1,0 +1,370 @@
+2025-06-25 23:07:58,123 - __main__ - INFO - 1단계: ETF 목록 수집 및 필터링
+2025-06-25 23:07:58,123 - src.collector.etf_collector - INFO - 종합 ETF 목록 수집 시작...
+2025-06-25 23:07:58,124 - src.collector.etf_collector - INFO - 네이버 금융에서 ETF 목록 수집 중...
+2025-06-25 23:07:58,221 - src.collector.etf_collector - INFO - 네이버에서 990개 ETF 수집 완료
+2025-06-25 23:07:58,222 - src.collector.etf_collector - INFO - 퇴직연금 투자 가능 ETF 필터링 중...
+2025-06-25 23:07:58,264 - src.collector.etf_collector - INFO - 퇴직연금 투자 가능 ETF: 86개
+2025-06-25 23:07:58,276 - __main__ - INFO - 퇴직연금 투자 가능 ETF 목록 저장: data/raw/pension_eligible_etfs.csv
+2025-06-25 23:07:58,277 - __main__ - INFO - 테스트용으로 50개 ETF로 제한
+2025-06-25 23:07:58,277 - __main__ - INFO - 2단계: ETF 가격 데이터 수집
+2025-06-25 23:07:58,277 - src.collector.data_processor - INFO - 50개 ETF 다중 시간대 데이터 수집 시작...
+2025-06-25 23:07:58,279 - src.collector.data_processor - INFO - 310970 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:07:58,402 - src.collector.data_processor - INFO - 310970 5day: 480개 데이터 포인트
+2025-06-25 23:07:58,410 - src.collector.data_processor - INFO - 310970 weekly: 345개 데이터 포인트
+2025-06-25 23:07:58,416 - src.collector.data_processor - INFO - 310970 monthly: 80개 데이터 포인트
+2025-06-25 23:07:58,416 - src.collector.data_processor - INFO - 310970: 총 2525개 데이터 포인트 수집 완료
+2025-06-25 23:07:58,416 - src.collector.data_processor - INFO - 310970 수집 완료 - daily: 1620개, 5day: 480개, weekly: 345개, monthly: 80개
+2025-06-25 23:07:58,517 - src.collector.data_processor - INFO - 102780 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:07:58,620 - src.collector.data_processor - INFO - 102780 5day: 727개 데이터 포인트
+2025-06-25 23:07:58,629 - src.collector.data_processor - INFO - 102780 weekly: 521개 데이터 포인트
+2025-06-25 23:07:58,634 - src.collector.data_processor - INFO - 102780 monthly: 121개 데이터 포인트
+2025-06-25 23:07:58,634 - src.collector.data_processor - INFO - 102780: 총 3822개 데이터 포인트 수집 완료
+2025-06-25 23:07:58,634 - src.collector.data_processor - INFO - 102780 수집 완료 - daily: 2453개, 5day: 727개, weekly: 521개, monthly: 121개
+2025-06-25 23:07:58,735 - src.collector.data_processor - INFO - 229200 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:07:58,872 - src.collector.data_processor - INFO - 229200 5day: 707개 데이터 포인트
+2025-06-25 23:07:58,881 - src.collector.data_processor - INFO - 229200 weekly: 508개 데이터 포인트
+2025-06-25 23:07:58,885 - src.collector.data_processor - INFO - 229200 monthly: 117개 데이터 포인트
+2025-06-25 23:07:58,886 - src.collector.data_processor - INFO - 229200: 총 3720개 데이터 포인트 수집 완료
+2025-06-25 23:07:58,886 - src.collector.data_processor - INFO - 229200 수집 완료 - daily: 2388개, 5day: 707개, weekly: 508개, monthly: 117개
+2025-06-25 23:07:58,987 - src.collector.data_processor - INFO - 411060 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:07:59,232 - src.collector.data_processor - INFO - 411060 5day: 257개 데이터 포인트
+2025-06-25 23:07:59,237 - src.collector.data_processor - INFO - 411060 weekly: 185개 데이터 포인트
+2025-06-25 23:07:59,240 - src.collector.data_processor - INFO - 411060 monthly: 43개 데이터 포인트
+2025-06-25 23:07:59,240 - src.collector.data_processor - INFO - 411060: 총 1347개 데이터 포인트 수집 완료
+2025-06-25 23:07:59,241 - src.collector.data_processor - INFO - 411060 수집 완료 - daily: 862개, 5day: 257개, weekly: 185개, monthly: 43개
+2025-06-25 23:07:59,342 - src.collector.data_processor - INFO - 466920 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:07:59,390 - src.collector.data_processor - INFO - 466920 5day: 125개 데이터 포인트
+2025-06-25 23:07:59,394 - src.collector.data_processor - INFO - 466920 weekly: 91개 데이터 포인트
+2025-06-25 23:07:59,397 - src.collector.data_processor - INFO - 466920 monthly: 21개 데이터 포인트
+2025-06-25 23:07:59,397 - src.collector.data_processor - INFO - 466920: 총 655개 데이터 포인트 수집 완료
+2025-06-25 23:07:59,398 - src.collector.data_processor - INFO - 466920 수집 완료 - daily: 418개, 5day: 125개, weekly: 91개, monthly: 21개
+2025-06-25 23:07:59,499 - src.collector.data_processor - INFO - 491080 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:07:59,570 - src.collector.data_processor - INFO - 491080 5day: 58개 데이터 포인트
+2025-06-25 23:07:59,573 - src.collector.data_processor - INFO - 491080 weekly: 42개 데이터 포인트
+2025-06-25 23:07:59,576 - src.collector.data_processor - INFO - 491080 monthly: 10개 데이터 포인트
+2025-06-25 23:07:59,576 - src.collector.data_processor - INFO - 491080: 총 298개 데이터 포인트 수집 완료
+2025-06-25 23:07:59,576 - src.collector.data_processor - INFO - 491080 수집 완료 - daily: 188개, 5day: 58개, weekly: 42개, monthly: 10개
+2025-06-25 23:07:59,677 - src.collector.data_processor - INFO - 278540 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:07:59,807 - src.collector.data_processor - INFO - 278540 5day: 555개 데이터 포인트
+2025-06-25 23:07:59,814 - src.collector.data_processor - INFO - 278540 weekly: 399개 데이터 포인트
+2025-06-25 23:07:59,819 - src.collector.data_processor - INFO - 278540 monthly: 92개 데이터 포인트
+2025-06-25 23:07:59,819 - src.collector.data_processor - INFO - 278540: 총 2917개 데이터 포인트 수집 완료
+2025-06-25 23:07:59,820 - src.collector.data_processor - INFO - 278540 수집 완료 - daily: 1871개, 5day: 555개, weekly: 399개, monthly: 92개
+2025-06-25 23:07:59,921 - src.collector.data_processor - INFO - 226490 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:00,037 - src.collector.data_processor - INFO - 226490 5day: 716개 데이터 포인트
+2025-06-25 23:08:00,046 - src.collector.data_processor - INFO - 226490 weekly: 513개 데이터 포인트
+2025-06-25 23:08:00,050 - src.collector.data_processor - INFO - 226490 monthly: 119개 데이터 포인트
+2025-06-25 23:08:00,050 - src.collector.data_processor - INFO - 226490: 총 3762개 데이터 포인트 수집 완료
+2025-06-25 23:08:00,051 - src.collector.data_processor - INFO - 226490 수집 완료 - daily: 2414개, 5day: 716개, weekly: 513개, monthly: 119개
+2025-06-25 23:08:00,152 - src.collector.data_processor - INFO - 466940 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:00,197 - src.collector.data_processor - INFO - 466940 5day: 124개 데이터 포인트
+2025-06-25 23:08:00,201 - src.collector.data_processor - INFO - 466940 weekly: 89개 데이터 포인트
+2025-06-25 23:08:00,205 - src.collector.data_processor - INFO - 466940 monthly: 21개 데이터 포인트
+2025-06-25 23:08:00,205 - src.collector.data_processor - INFO - 466940: 총 645개 데이터 포인트 수집 완료
+2025-06-25 23:08:00,205 - src.collector.data_processor - INFO - 466940 수집 완료 - daily: 411개, 5day: 124개, weekly: 89개, monthly: 21개
+2025-06-25 23:08:00,306 - src.collector.data_processor - INFO - 0061Z0 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:00,658 - src.collector.data_processor - WARNING - FinanceDataReader 실패 (0061Z0): 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v8/finance/chart/0061Z0?period1=1435417200&period2=1750777200&interval=1d&includeAdjustedClose=true
+2025-06-25 23:08:01,572 - src.collector.data_processor - WARNING - yfinance 실패 (0061Z0): ['close_price']
+2025-06-25 23:08:01,572 - src.collector.data_processor - WARNING - 0061Z0: 데이터 수집 실패
+2025-06-25 23:08:01,572 - src.collector.data_processor - WARNING - 0061Z0: 데이터 수집 실패
+2025-06-25 23:08:01,674 - src.collector.data_processor - INFO - 091170 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:01,753 - src.collector.data_processor - INFO - 091170 5day: 727개 데이터 포인트
+2025-06-25 23:08:01,761 - src.collector.data_processor - INFO - 091170 weekly: 521개 데이터 포인트
+2025-06-25 23:08:01,765 - src.collector.data_processor - INFO - 091170 monthly: 121개 데이터 포인트
+2025-06-25 23:08:01,766 - src.collector.data_processor - INFO - 091170: 총 3822개 데이터 포인트 수집 완료
+2025-06-25 23:08:01,766 - src.collector.data_processor - INFO - 091170 수집 완료 - daily: 2453개, 5day: 727개, weekly: 521개, monthly: 121개
+2025-06-25 23:08:01,867 - src.collector.data_processor - INFO - 476800 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:01,957 - src.collector.data_processor - INFO - 476800 5day: 96개 데이터 포인트
+2025-06-25 23:08:01,964 - src.collector.data_processor - INFO - 476800 weekly: 69개 데이터 포인트
+2025-06-25 23:08:01,969 - src.collector.data_processor - INFO - 476800 monthly: 16개 데이터 포인트
+2025-06-25 23:08:01,970 - src.collector.data_processor - INFO - 476800: 총 498개 데이터 포인트 수집 완료
+2025-06-25 23:08:01,970 - src.collector.data_processor - INFO - 476800 수집 완료 - daily: 317개, 5day: 96개, weekly: 69개, monthly: 16개
+2025-06-25 23:08:02,071 - src.collector.data_processor - INFO - 494670 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:02,117 - src.collector.data_processor - INFO - 494670 5day: 49개 데이터 포인트
+2025-06-25 23:08:02,121 - src.collector.data_processor - INFO - 494670 weekly: 36개 데이터 포인트
+2025-06-25 23:08:02,125 - src.collector.data_processor - INFO - 494670 monthly: 9개 데이터 포인트
+2025-06-25 23:08:02,125 - src.collector.data_processor - INFO - 494670: 총 258개 데이터 포인트 수집 완료
+2025-06-25 23:08:02,126 - src.collector.data_processor - INFO - 494670 수집 완료 - daily: 164개, 5day: 49개, weekly: 36개, monthly: 9개
+2025-06-25 23:08:02,226 - src.collector.data_processor - INFO - 102970 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:02,364 - src.collector.data_processor - INFO - 102970 5day: 727개 데이터 포인트
+2025-06-25 23:08:02,371 - src.collector.data_processor - INFO - 102970 weekly: 521개 데이터 포인트
+2025-06-25 23:08:02,377 - src.collector.data_processor - INFO - 102970 monthly: 121개 데이터 포인트
+2025-06-25 23:08:02,377 - src.collector.data_processor - INFO - 102970: 총 3822개 데이터 포인트 수집 완료
+2025-06-25 23:08:02,377 - src.collector.data_processor - INFO - 102970 수집 완료 - daily: 2453개, 5day: 727개, weekly: 521개, monthly: 121개
+2025-06-25 23:08:02,478 - src.collector.data_processor - INFO - 395270 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:02,538 - src.collector.data_processor - INFO - 395270 5day: 283개 데이터 포인트
+2025-06-25 23:08:02,543 - src.collector.data_processor - INFO - 395270 weekly: 205개 데이터 포인트
+2025-06-25 23:08:02,546 - src.collector.data_processor - INFO - 395270 monthly: 48개 데이터 포인트
+2025-06-25 23:08:02,546 - src.collector.data_processor - INFO - 395270: 총 1490개 데이터 포인트 수집 완료
+2025-06-25 23:08:02,546 - src.collector.data_processor - INFO - 395270 수집 완료 - daily: 954개, 5day: 283개, weekly: 205개, monthly: 48개
+2025-06-25 23:08:02,648 - src.collector.data_processor - INFO - 138520 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:02,758 - src.collector.data_processor - INFO - 138520 5day: 727개 데이터 포인트
+2025-06-25 23:08:02,766 - src.collector.data_processor - INFO - 138520 weekly: 521개 데이터 포인트
+2025-06-25 23:08:02,771 - src.collector.data_processor - INFO - 138520 monthly: 121개 데이터 포인트
+2025-06-25 23:08:02,771 - src.collector.data_processor - INFO - 138520: 총 3822개 데이터 포인트 수집 완료
+2025-06-25 23:08:02,772 - src.collector.data_processor - INFO - 138520 수집 완료 - daily: 2453개, 5day: 727개, weekly: 521개, monthly: 121개
+2025-06-25 23:08:02,873 - src.collector.data_processor - INFO - 277630 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:02,939 - src.collector.data_processor - INFO - 277630 5day: 567개 데이터 포인트
+2025-06-25 23:08:02,947 - src.collector.data_processor - INFO - 277630 weekly: 408개 데이터 포인트
+2025-06-25 23:08:02,951 - src.collector.data_processor - INFO - 277630 monthly: 95개 데이터 포인트
+2025-06-25 23:08:02,951 - src.collector.data_processor - INFO - 277630: 총 2985개 데이터 포인트 수집 완료
+2025-06-25 23:08:02,951 - src.collector.data_processor - INFO - 277630 수집 완료 - daily: 1915개, 5day: 567개, weekly: 408개, monthly: 95개
+2025-06-25 23:08:03,052 - src.collector.data_processor - INFO - 232080 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:03,149 - src.collector.data_processor - INFO - 232080 5day: 700개 데이터 포인트
+2025-06-25 23:08:03,158 - src.collector.data_processor - INFO - 232080 weekly: 502개 데이터 포인트
+2025-06-25 23:08:03,161 - src.collector.data_processor - INFO - 232080 monthly: 116개 데이터 포인트
+2025-06-25 23:08:03,161 - src.collector.data_processor - INFO - 232080: 총 3677개 데이터 포인트 수집 완료
+2025-06-25 23:08:03,162 - src.collector.data_processor - INFO - 232080 수집 완료 - daily: 2359개, 5day: 700개, weekly: 502개, monthly: 116개
+2025-06-25 23:08:03,263 - src.collector.data_processor - INFO - 302450 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:03,342 - src.collector.data_processor - INFO - 302450 5day: 504개 데이터 포인트
+2025-06-25 23:08:03,349 - src.collector.data_processor - INFO - 302450 weekly: 362개 데이터 포인트
+2025-06-25 23:08:03,353 - src.collector.data_processor - INFO - 302450 monthly: 84개 데이터 포인트
+2025-06-25 23:08:03,353 - src.collector.data_processor - INFO - 302450: 총 2649개 데이터 포인트 수집 완료
+2025-06-25 23:08:03,353 - src.collector.data_processor - INFO - 302450 수집 완료 - daily: 1699개, 5day: 504개, weekly: 362개, monthly: 84개
+2025-06-25 23:08:03,454 - src.collector.data_processor - INFO - 492500 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:03,588 - src.collector.data_processor - INFO - 492500 5day: 53개 데이터 포인트
+2025-06-25 23:08:03,592 - src.collector.data_processor - INFO - 492500 weekly: 39개 데이터 포인트
+2025-06-25 23:08:03,596 - src.collector.data_processor - INFO - 492500 monthly: 9개 데이터 포인트
+2025-06-25 23:08:03,596 - src.collector.data_processor - INFO - 492500: 총 277개 데이터 포인트 수집 완료
+2025-06-25 23:08:03,596 - src.collector.data_processor - INFO - 492500 수집 완료 - daily: 176개, 5day: 53개, weekly: 39개, monthly: 9개
+2025-06-25 23:08:03,698 - src.collector.data_processor - INFO - 441800 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:03,754 - src.collector.data_processor - INFO - 441800 5day: 201개 데이터 포인트
+2025-06-25 23:08:03,759 - src.collector.data_processor - INFO - 441800 weekly: 144개 데이터 포인트
+2025-06-25 23:08:03,762 - src.collector.data_processor - INFO - 441800 monthly: 34개 데이터 포인트
+2025-06-25 23:08:03,762 - src.collector.data_processor - INFO - 441800: 총 1049개 데이터 포인트 수집 완료
+2025-06-25 23:08:03,763 - src.collector.data_processor - INFO - 441800 수집 완료 - daily: 670개, 5day: 201개, weekly: 144개, monthly: 34개
+2025-06-25 23:08:03,864 - src.collector.data_processor - INFO - 213610 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:03,979 - src.collector.data_processor - INFO - 213610 5day: 727개 데이터 포인트
+2025-06-25 23:08:03,989 - src.collector.data_processor - INFO - 213610 weekly: 521개 데이터 포인트
+2025-06-25 23:08:03,993 - src.collector.data_processor - INFO - 213610 monthly: 121개 데이터 포인트
+2025-06-25 23:08:03,993 - src.collector.data_processor - INFO - 213610: 총 3822개 데이터 포인트 수집 완료
+2025-06-25 23:08:03,994 - src.collector.data_processor - INFO - 213610 수집 완료 - daily: 2453개, 5day: 727개, weekly: 521개, monthly: 121개
+2025-06-25 23:08:04,095 - src.collector.data_processor - INFO - 489570 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:04,162 - src.collector.data_processor - INFO - 489570 5day: 51개 데이터 포인트
+2025-06-25 23:08:04,166 - src.collector.data_processor - INFO - 489570 weekly: 37개 데이터 포인트
+2025-06-25 23:08:04,169 - src.collector.data_processor - INFO - 489570 monthly: 9개 데이터 포인트
+2025-06-25 23:08:04,170 - src.collector.data_processor - INFO - 489570: 총 266개 데이터 포인트 수집 완료
+2025-06-25 23:08:04,170 - src.collector.data_processor - INFO - 489570 수집 완료 - daily: 169개, 5day: 51개, weekly: 37개, monthly: 9개
+2025-06-25 23:08:04,271 - src.collector.data_processor - INFO - 270810 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:04,435 - src.collector.data_processor - INFO - 270810 5day: 583개 데이터 포인트
+2025-06-25 23:08:04,443 - src.collector.data_processor - INFO - 270810 weekly: 419개 데이터 포인트
+2025-06-25 23:08:04,448 - src.collector.data_processor - INFO - 270810 monthly: 97개 데이터 포인트
+2025-06-25 23:08:04,448 - src.collector.data_processor - INFO - 270810: 총 3067개 데이터 포인트 수집 완료
+2025-06-25 23:08:04,448 - src.collector.data_processor - INFO - 270810 수집 완료 - daily: 1968개, 5day: 583개, weekly: 419개, monthly: 97개
+2025-06-25 23:08:04,549 - src.collector.data_processor - INFO - 448330 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:04,623 - src.collector.data_processor - INFO - 448330 5day: 187개 데이터 포인트
+2025-06-25 23:08:04,627 - src.collector.data_processor - INFO - 448330 weekly: 135개 데이터 포인트
+2025-06-25 23:08:04,631 - src.collector.data_processor - INFO - 448330 monthly: 32개 데이터 포인트
+2025-06-25 23:08:04,631 - src.collector.data_processor - INFO - 448330: 총 981개 데이터 포인트 수집 완료
+2025-06-25 23:08:04,632 - src.collector.data_processor - INFO - 448330 수집 완료 - daily: 627개, 5day: 187개, weekly: 135개, monthly: 32개
+2025-06-25 23:08:04,733 - src.collector.data_processor - INFO - 237350 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:04,815 - src.collector.data_processor - INFO - 237350 5day: 686개 데이터 포인트
+2025-06-25 23:08:04,823 - src.collector.data_processor - INFO - 237350 weekly: 491개 데이터 포인트
+2025-06-25 23:08:04,828 - src.collector.data_processor - INFO - 237350 monthly: 114개 데이터 포인트
+2025-06-25 23:08:04,828 - src.collector.data_processor - INFO - 237350: 총 3599개 데이터 포인트 수집 완료
+2025-06-25 23:08:04,829 - src.collector.data_processor - INFO - 237350 수집 완료 - daily: 2308개, 5day: 686개, weekly: 491개, monthly: 114개
+2025-06-25 23:08:04,930 - src.collector.data_processor - INFO - 441540 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:05,118 - src.collector.data_processor - INFO - 441540 5day: 202개 데이터 포인트
+2025-06-25 23:08:05,122 - src.collector.data_processor - INFO - 441540 weekly: 146개 데이터 포인트
+2025-06-25 23:08:05,126 - src.collector.data_processor - INFO - 441540 monthly: 34개 데이터 포인트
+2025-06-25 23:08:05,127 - src.collector.data_processor - INFO - 441540: 총 1060개 데이터 포인트 수집 완료
+2025-06-25 23:08:05,127 - src.collector.data_processor - INFO - 441540 수집 완료 - daily: 678개, 5day: 202개, weekly: 146개, monthly: 34개
+2025-06-25 23:08:05,227 - src.collector.data_processor - INFO - 138540 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:05,338 - src.collector.data_processor - INFO - 138540 5day: 727개 데이터 포인트
+2025-06-25 23:08:05,345 - src.collector.data_processor - INFO - 138540 weekly: 521개 데이터 포인트
+2025-06-25 23:08:05,350 - src.collector.data_processor - INFO - 138540 monthly: 121개 데이터 포인트
+2025-06-25 23:08:05,350 - src.collector.data_processor - INFO - 138540: 총 3822개 데이터 포인트 수집 완료
+2025-06-25 23:08:05,351 - src.collector.data_processor - INFO - 138540 수집 완료 - daily: 2453개, 5day: 727개, weekly: 521개, monthly: 121개
+2025-06-25 23:08:05,452 - src.collector.data_processor - INFO - 395290 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:05,535 - src.collector.data_processor - INFO - 395290 5day: 283개 데이터 포인트
+2025-06-25 23:08:05,539 - src.collector.data_processor - INFO - 395290 weekly: 205개 데이터 포인트
+2025-06-25 23:08:05,543 - src.collector.data_processor - INFO - 395290 monthly: 48개 데이터 포인트
+2025-06-25 23:08:05,544 - src.collector.data_processor - INFO - 395290: 총 1490개 데이터 포인트 수집 완료
+2025-06-25 23:08:05,544 - src.collector.data_processor - INFO - 395290 수집 완료 - daily: 954개, 5day: 283개, weekly: 205개, monthly: 48개
+2025-06-25 23:08:05,645 - src.collector.data_processor - INFO - 385720 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:05,733 - src.collector.data_processor - INFO - 385720 5day: 299개 데이터 포인트
+2025-06-25 23:08:05,738 - src.collector.data_processor - INFO - 385720 weekly: 214개 데이터 포인트
+2025-06-25 23:08:05,742 - src.collector.data_processor - INFO - 385720 monthly: 50개 데이터 포인트
+2025-06-25 23:08:05,743 - src.collector.data_processor - INFO - 385720: 총 1565개 데이터 포인트 수집 완료
+2025-06-25 23:08:05,743 - src.collector.data_processor - INFO - 385720 수집 완료 - daily: 1002개, 5day: 299개, weekly: 214개, monthly: 50개
+2025-06-25 23:08:05,844 - src.collector.data_processor - INFO - 117700 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:06,060 - src.collector.data_processor - INFO - 117700 5day: 727개 데이터 포인트
+2025-06-25 23:08:06,069 - src.collector.data_processor - INFO - 117700 weekly: 521개 데이터 포인트
+2025-06-25 23:08:06,073 - src.collector.data_processor - INFO - 117700 monthly: 121개 데이터 포인트
+2025-06-25 23:08:06,073 - src.collector.data_processor - INFO - 117700: 총 3822개 데이터 포인트 수집 완료
+2025-06-25 23:08:06,074 - src.collector.data_processor - INFO - 117700 수집 완료 - daily: 2453개, 5day: 727개, weekly: 521개, monthly: 121개
+2025-06-25 23:08:06,175 - src.collector.data_processor - INFO - 403790 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:06,229 - src.collector.data_processor - INFO - 403790 5day: 269개 데이터 포인트
+2025-06-25 23:08:06,233 - src.collector.data_processor - INFO - 403790 weekly: 194개 데이터 포인트
+2025-06-25 23:08:06,237 - src.collector.data_processor - INFO - 403790 monthly: 45개 데이터 포인트
+2025-06-25 23:08:06,237 - src.collector.data_processor - INFO - 403790: 총 1415개 데이터 포인트 수집 완료
+2025-06-25 23:08:06,239 - src.collector.data_processor - INFO - 403790 수집 완료 - daily: 907개, 5day: 269개, weekly: 194개, monthly: 45개
+2025-06-25 23:08:06,340 - src.collector.data_processor - INFO - 139220 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:06,465 - src.collector.data_processor - INFO - 139220 5day: 727개 데이터 포인트
+2025-06-25 23:08:06,474 - src.collector.data_processor - INFO - 139220 weekly: 521개 데이터 포인트
+2025-06-25 23:08:06,479 - src.collector.data_processor - INFO - 139220 monthly: 121개 데이터 포인트
+2025-06-25 23:08:06,480 - src.collector.data_processor - INFO - 139220: 총 3822개 데이터 포인트 수집 완료
+2025-06-25 23:08:06,480 - src.collector.data_processor - INFO - 139220 수집 완료 - daily: 2453개, 5day: 727개, weekly: 521개, monthly: 121개
+2025-06-25 23:08:06,581 - src.collector.data_processor - INFO - 359210 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:06,686 - src.collector.data_processor - INFO - 359210 5day: 359개 데이터 포인트
+2025-06-25 23:08:06,691 - src.collector.data_processor - INFO - 359210 weekly: 258개 데이터 포인트
+2025-06-25 23:08:06,694 - src.collector.data_processor - INFO - 359210 monthly: 60개 데이터 포인트
+2025-06-25 23:08:06,695 - src.collector.data_processor - INFO - 359210: 총 1886개 데이터 포인트 수집 완료
+2025-06-25 23:08:06,695 - src.collector.data_processor - INFO - 359210 수집 완료 - daily: 1209개, 5day: 359개, weekly: 258개, monthly: 60개
+2025-06-25 23:08:06,797 - src.collector.data_processor - INFO - 469170 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:06,892 - src.collector.data_processor - INFO - 469170 5day: 124개 데이터 포인트
+2025-06-25 23:08:06,895 - src.collector.data_processor - INFO - 469170 weekly: 89개 데이터 포인트
+2025-06-25 23:08:06,899 - src.collector.data_processor - INFO - 469170 monthly: 21개 데이터 포인트
+2025-06-25 23:08:06,899 - src.collector.data_processor - INFO - 469170: 총 645개 데이터 포인트 수집 완료
+2025-06-25 23:08:06,900 - src.collector.data_processor - INFO - 469170 수집 완료 - daily: 411개, 5day: 124개, weekly: 89개, monthly: 21개
+2025-06-25 23:08:07,000 - src.collector.data_processor - INFO - 0072R0 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:07,246 - src.collector.data_processor - WARNING - FinanceDataReader 실패 (0072R0): 404 Client Error: Not Found for url: https://query2.finance.yahoo.com/v8/finance/chart/0072R0?period1=1435417200&period2=1750777200&interval=1d&includeAdjustedClose=true
+2025-06-25 23:08:07,531 - yfinance - ERROR - 
+1 Failed download:
+2025-06-25 23:08:07,531 - yfinance - ERROR - ['0072R0.KS']: YFPricesMissingError('possibly delisted; no price data found  (1d 2015-06-28 -> 2025-06-25)')
+2025-06-25 23:08:07,535 - src.collector.data_processor - WARNING - 0072R0: 데이터 수집 실패
+2025-06-25 23:08:07,535 - src.collector.data_processor - WARNING - 0072R0: 데이터 수집 실패
+2025-06-25 23:08:07,637 - src.collector.data_processor - INFO - 445150 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:07,709 - src.collector.data_processor - INFO - 445150 5day: 191개 데이터 포인트
+2025-06-25 23:08:07,714 - src.collector.data_processor - INFO - 445150 weekly: 137개 데이터 포인트
+2025-06-25 23:08:07,718 - src.collector.data_processor - INFO - 445150 monthly: 32개 데이터 포인트
+2025-06-25 23:08:07,718 - src.collector.data_processor - INFO - 445150: 총 997개 데이터 포인트 수집 완료
+2025-06-25 23:08:07,718 - src.collector.data_processor - INFO - 445150 수집 완료 - daily: 637개, 5day: 191개, weekly: 137개, monthly: 32개
+2025-06-25 23:08:07,820 - src.collector.data_processor - INFO - 108450 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:07,907 - src.collector.data_processor - INFO - 108450 5day: 727개 데이터 포인트
+2025-06-25 23:08:07,915 - src.collector.data_processor - INFO - 108450 weekly: 521개 데이터 포인트
+2025-06-25 23:08:07,920 - src.collector.data_processor - INFO - 108450 monthly: 121개 데이터 포인트
+2025-06-25 23:08:07,920 - src.collector.data_processor - INFO - 108450: 총 3822개 데이터 포인트 수집 완료
+2025-06-25 23:08:07,920 - src.collector.data_processor - INFO - 108450 수집 완료 - daily: 2453개, 5day: 727개, weekly: 521개, monthly: 121개
+2025-06-25 23:08:08,022 - src.collector.data_processor - INFO - 210780 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:08,116 - src.collector.data_processor - INFO - 210780 5day: 727개 데이터 포인트
+2025-06-25 23:08:08,124 - src.collector.data_processor - INFO - 210780 weekly: 521개 데이터 포인트
+2025-06-25 23:08:08,129 - src.collector.data_processor - INFO - 210780 monthly: 121개 데이터 포인트
+2025-06-25 23:08:08,129 - src.collector.data_processor - INFO - 210780: 총 3822개 데이터 포인트 수집 완료
+2025-06-25 23:08:08,130 - src.collector.data_processor - INFO - 210780 수집 완료 - daily: 2453개, 5day: 727개, weekly: 521개, monthly: 121개
+2025-06-25 23:08:08,231 - src.collector.data_processor - INFO - 332940 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:08,326 - src.collector.data_processor - INFO - 332940 5day: 425개 데이터 포인트
+2025-06-25 23:08:08,332 - src.collector.data_processor - INFO - 332940 weekly: 305개 데이터 포인트
+2025-06-25 23:08:08,336 - src.collector.data_processor - INFO - 332940 monthly: 71개 데이터 포인트
+2025-06-25 23:08:08,337 - src.collector.data_processor - INFO - 332940: 총 2231개 데이터 포인트 수집 완료
+2025-06-25 23:08:08,337 - src.collector.data_processor - INFO - 332940 수집 완료 - daily: 1430개, 5day: 425개, weekly: 305개, monthly: 71개
+2025-06-25 23:08:08,438 - src.collector.data_processor - INFO - 157500 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:08,552 - src.collector.data_processor - INFO - 157500 5day: 727개 데이터 포인트
+2025-06-25 23:08:08,561 - src.collector.data_processor - INFO - 157500 weekly: 521개 데이터 포인트
+2025-06-25 23:08:08,565 - src.collector.data_processor - INFO - 157500 monthly: 121개 데이터 포인트
+2025-06-25 23:08:08,565 - src.collector.data_processor - INFO - 157500: 총 3822개 데이터 포인트 수집 완료
+2025-06-25 23:08:08,566 - src.collector.data_processor - INFO - 157500 수집 완료 - daily: 2453개, 5day: 727개, weekly: 521개, monthly: 121개
+2025-06-25 23:08:08,666 - src.collector.data_processor - INFO - 368190 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:08,722 - src.collector.data_processor - INFO - 368190 5day: 337개 데이터 포인트
+2025-06-25 23:08:08,727 - src.collector.data_processor - INFO - 368190 weekly: 242개 데이터 포인트
+2025-06-25 23:08:08,731 - src.collector.data_processor - INFO - 368190 monthly: 56개 데이터 포인트
+2025-06-25 23:08:08,732 - src.collector.data_processor - INFO - 368190: 총 1769개 데이터 포인트 수집 완료
+2025-06-25 23:08:08,732 - src.collector.data_processor - INFO - 368190 수집 완료 - daily: 1134개, 5day: 337개, weekly: 242개, monthly: 56개
+2025-06-25 23:08:08,834 - src.collector.data_processor - INFO - 298770 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:08,965 - src.collector.data_processor - INFO - 298770 5day: 512개 데이터 포인트
+2025-06-25 23:08:08,973 - src.collector.data_processor - INFO - 298770 weekly: 368개 데이터 포인트
+2025-06-25 23:08:08,976 - src.collector.data_processor - INFO - 298770 monthly: 85개 데이터 포인트
+2025-06-25 23:08:08,976 - src.collector.data_processor - INFO - 298770: 총 2694개 데이터 포인트 수집 완료
+2025-06-25 23:08:08,977 - src.collector.data_processor - INFO - 298770 수집 완료 - daily: 1729개, 5day: 512개, weekly: 368개, monthly: 85개
+2025-06-25 23:08:09,078 - src.collector.data_processor - INFO - 140700 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:09,176 - src.collector.data_processor - INFO - 140700 5day: 727개 데이터 포인트
+2025-06-25 23:08:09,184 - src.collector.data_processor - INFO - 140700 weekly: 521개 데이터 포인트
+2025-06-25 23:08:09,190 - src.collector.data_processor - INFO - 140700 monthly: 121개 데이터 포인트
+2025-06-25 23:08:09,190 - src.collector.data_processor - INFO - 140700: 총 3822개 데이터 포인트 수집 완료
+2025-06-25 23:08:09,191 - src.collector.data_processor - INFO - 140700 수집 완료 - daily: 2453개, 5day: 727개, weekly: 521개, monthly: 121개
+2025-06-25 23:08:09,292 - src.collector.data_processor - INFO - 354500 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:09,403 - src.collector.data_processor - INFO - 354500 5day: 374개 데이터 포인트
+2025-06-25 23:08:09,408 - src.collector.data_processor - INFO - 354500 weekly: 269개 데이터 포인트
+2025-06-25 23:08:09,412 - src.collector.data_processor - INFO - 354500 monthly: 62개 데이터 포인트
+2025-06-25 23:08:09,412 - src.collector.data_processor - INFO - 354500: 총 1967개 데이터 포인트 수집 완료
+2025-06-25 23:08:09,412 - src.collector.data_processor - INFO - 354500 수집 완료 - daily: 1262개, 5day: 374개, weekly: 269개, monthly: 62개
+2025-06-25 23:08:09,514 - src.collector.data_processor - INFO - 438900 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:09,644 - src.collector.data_processor - INFO - 438900 5day: 209개 데이터 포인트
+2025-06-25 23:08:09,649 - src.collector.data_processor - INFO - 438900 weekly: 150개 데이터 포인트
+2025-06-25 23:08:09,654 - src.collector.data_processor - INFO - 438900 monthly: 35개 데이터 포인트
+2025-06-25 23:08:09,654 - src.collector.data_processor - INFO - 438900: 총 1091개 데이터 포인트 수집 완료
+2025-06-25 23:08:09,654 - src.collector.data_processor - INFO - 438900 수집 완료 - daily: 697개, 5day: 209개, weekly: 150개, monthly: 35개
+2025-06-25 23:08:09,755 - src.collector.data_processor - INFO - 479850 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:09,818 - src.collector.data_processor - INFO - 479850 5day: 87개 데이터 포인트
+2025-06-25 23:08:09,822 - src.collector.data_processor - INFO - 479850 weekly: 63개 데이터 포인트
+2025-06-25 23:08:09,825 - src.collector.data_processor - INFO - 479850 monthly: 15개 데이터 포인트
+2025-06-25 23:08:09,826 - src.collector.data_processor - INFO - 479850: 총 453개 데이터 포인트 수집 완료
+2025-06-25 23:08:09,826 - src.collector.data_processor - INFO - 479850 수집 완료 - daily: 288개, 5day: 87개, weekly: 63개, monthly: 15개
+2025-06-25 23:08:09,926 - src.collector.data_processor - INFO - 450910 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:09,974 - src.collector.data_processor - INFO - 450910 5day: 174개 데이터 포인트
+2025-06-25 23:08:09,978 - src.collector.data_processor - INFO - 450910 weekly: 126개 데이터 포인트
+2025-06-25 23:08:09,982 - src.collector.data_processor - INFO - 450910 monthly: 30개 데이터 포인트
+2025-06-25 23:08:09,982 - src.collector.data_processor - INFO - 450910: 총 915개 데이터 포인트 수집 완료
+2025-06-25 23:08:09,983 - src.collector.data_processor - INFO - 450910 수집 완료 - daily: 585개, 5day: 174개, weekly: 126개, monthly: 30개
+2025-06-25 23:08:10,083 - src.collector.data_processor - INFO - 292190 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:10,223 - src.collector.data_processor - INFO - 292190 5day: 528개 데이터 포인트
+2025-06-25 23:08:10,230 - src.collector.data_processor - INFO - 292190 weekly: 379개 데이터 포인트
+2025-06-25 23:08:10,234 - src.collector.data_processor - INFO - 292190 monthly: 88개 데이터 포인트
+2025-06-25 23:08:10,234 - src.collector.data_processor - INFO - 292190: 총 2775개 데이터 포인트 수집 완료
+2025-06-25 23:08:10,235 - src.collector.data_processor - INFO - 292190 수집 완료 - daily: 1780개, 5day: 528개, weekly: 379개, monthly: 88개
+2025-06-25 23:08:10,336 - src.collector.data_processor - INFO - 261070 다중 시간대 데이터 수집 중... (2015-06-28 ~ 2025-06-25)
+2025-06-25 23:08:10,437 - src.collector.data_processor - INFO - 261070 5day: 620개 데이터 포인트
+2025-06-25 23:08:10,444 - src.collector.data_processor - INFO - 261070 weekly: 445개 데이터 포인트
+2025-06-25 23:08:10,448 - src.collector.data_processor - INFO - 261070 monthly: 103개 데이터 포인트
+2025-06-25 23:08:10,448 - src.collector.data_processor - INFO - 261070: 총 3258개 데이터 포인트 수집 완료
+2025-06-25 23:08:10,448 - src.collector.data_processor - INFO - 261070 수집 완료 - daily: 2090개, 5day: 620개, weekly: 445개, monthly: 103개
+2025-06-25 23:08:10,550 - src.collector.data_processor - INFO - 다중 시간대 데이터 수집 완료: 성공 48개, 실패 2개
+2025-06-25 23:08:10,550 - src.collector.data_processor - WARNING - 실패한 ETF: ['0061Z0', '0072R0']
+2025-06-25 23:08:10,552 - src.collector.data_processor - INFO - 전체 수집된 데이터 포인트: 108,740개
+2025-06-25 23:08:11,008 - __main__ - INFO - 가격 데이터 저장 완료: 48개 ETF
+2025-06-25 23:08:11,008 - __main__ - INFO - 3단계: Time-LLM 형식 변환
+2025-06-25 23:08:11,008 - src.collector.time_llm_converter - INFO - Time-LLM 형식으로 데이터 변환 시작...
+2025-06-25 23:08:11,549 - src.collector.time_llm_converter - INFO - 310970: 1581개 샘플 생성
+2025-06-25 23:08:12,367 - src.collector.time_llm_converter - INFO - 102780: 2414개 샘플 생성
+2025-06-25 23:08:13,069 - src.collector.time_llm_converter - INFO - 229200: 2349개 샘플 생성
+2025-06-25 23:08:13,316 - src.collector.time_llm_converter - INFO - 411060: 823개 샘플 생성
+2025-06-25 23:08:13,429 - src.collector.time_llm_converter - INFO - 466920: 379개 샘플 생성
+2025-06-25 23:08:13,474 - src.collector.time_llm_converter - INFO - 491080: 149개 샘플 생성
+2025-06-25 23:08:14,021 - src.collector.time_llm_converter - INFO - 278540: 1832개 샘플 생성
+2025-06-25 23:08:14,713 - src.collector.time_llm_converter - INFO - 226490: 2375개 샘플 생성
+2025-06-25 23:08:14,825 - src.collector.time_llm_converter - INFO - 466940: 372개 샘플 생성
+2025-06-25 23:08:15,552 - src.collector.time_llm_converter - INFO - 091170: 2414개 샘플 생성
+2025-06-25 23:08:15,634 - src.collector.time_llm_converter - INFO - 476800: 278개 샘플 생성
+2025-06-25 23:08:15,672 - src.collector.time_llm_converter - INFO - 494670: 125개 샘플 생성
+2025-06-25 23:08:16,455 - src.collector.time_llm_converter - INFO - 102970: 2414개 샘플 생성
+2025-06-25 23:08:16,742 - src.collector.time_llm_converter - INFO - 395270: 915개 샘플 생성
+2025-06-25 23:08:17,471 - src.collector.time_llm_converter - INFO - 138520: 2414개 샘플 생성
+2025-06-25 23:08:18,023 - src.collector.time_llm_converter - INFO - 277630: 1876개 샘플 생성
+2025-06-25 23:08:18,707 - src.collector.time_llm_converter - INFO - 232080: 2320개 샘플 생성
+2025-06-25 23:08:19,220 - src.collector.time_llm_converter - INFO - 302450: 1660개 샘플 생성
+2025-06-25 23:08:19,269 - src.collector.time_llm_converter - INFO - 492500: 137개 샘플 생성
+2025-06-25 23:08:19,457 - src.collector.time_llm_converter - INFO - 441800: 631개 샘플 생성
+2025-06-25 23:08:20,223 - src.collector.time_llm_converter - INFO - 213610: 2414개 샘플 생성
+2025-06-25 23:08:20,263 - src.collector.time_llm_converter - INFO - 489570: 130개 샘플 생성
+2025-06-25 23:08:20,825 - src.collector.time_llm_converter - INFO - 270810: 1929개 샘플 생성
+2025-06-25 23:08:20,997 - src.collector.time_llm_converter - INFO - 448330: 588개 샘플 생성
+2025-06-25 23:08:21,781 - src.collector.time_llm_converter - INFO - 237350: 2269개 샘플 생성
+2025-06-25 23:08:22,014 - src.collector.time_llm_converter - INFO - 441540: 639개 샘플 생성
+2025-06-25 23:08:22,732 - src.collector.time_llm_converter - INFO - 138540: 2414개 샘플 생성
+2025-06-25 23:08:23,006 - src.collector.time_llm_converter - INFO - 395290: 915개 샘플 생성
+2025-06-25 23:08:23,340 - src.collector.time_llm_converter - INFO - 385720: 963개 샘플 생성
+2025-06-25 23:08:24,076 - src.collector.time_llm_converter - INFO - 117700: 2414개 샘플 생성
+2025-06-25 23:08:24,334 - src.collector.time_llm_converter - INFO - 403790: 868개 샘플 생성
+2025-06-25 23:08:25,048 - src.collector.time_llm_converter - INFO - 139220: 2414개 샘플 생성
+2025-06-25 23:08:25,410 - src.collector.time_llm_converter - INFO - 359210: 1170개 샘플 생성
+2025-06-25 23:08:25,522 - src.collector.time_llm_converter - INFO - 469170: 372개 샘플 생성
+2025-06-25 23:08:25,698 - src.collector.time_llm_converter - INFO - 445150: 598개 샘플 생성
+2025-06-25 23:08:26,417 - src.collector.time_llm_converter - INFO - 108450: 2414개 샘플 생성
+2025-06-25 23:08:27,148 - src.collector.time_llm_converter - INFO - 210780: 2414개 샘플 생성
+2025-06-25 23:08:27,602 - src.collector.time_llm_converter - INFO - 332940: 1391개 샘플 생성
+2025-06-25 23:08:28,426 - src.collector.time_llm_converter - INFO - 157500: 2414개 샘플 생성
+2025-06-25 23:08:28,753 - src.collector.time_llm_converter - INFO - 368190: 1095개 샘플 생성
+2025-06-25 23:08:29,245 - src.collector.time_llm_converter - INFO - 298770: 1690개 샘플 생성
+2025-06-25 23:08:29,984 - src.collector.time_llm_converter - INFO - 140700: 2414개 샘플 생성
+2025-06-25 23:08:30,347 - src.collector.time_llm_converter - INFO - 354500: 1223개 샘플 생성
+2025-06-25 23:08:30,541 - src.collector.time_llm_converter - INFO - 438900: 658개 샘플 생성
+2025-06-25 23:08:30,614 - src.collector.time_llm_converter - INFO - 479850: 249개 샘플 생성
+2025-06-25 23:08:30,775 - src.collector.time_llm_converter - INFO - 450910: 546개 샘플 생성
+2025-06-25 23:08:31,337 - src.collector.time_llm_converter - INFO - 292190: 1741개 샘플 생성
+2025-06-25 23:08:31,950 - src.collector.time_llm_converter - INFO - 261070: 2051개 샘플 생성
+2025-06-25 23:08:31,950 - src.collector.time_llm_converter - INFO - Time-LLM 형식 변환 완료: 총 67855개 샘플
+2025-06-25 23:08:34,224 - __main__ - INFO - Time-LLM 학습 데이터 저장: data/time_llm_format/time_llm_training_data.json
+2025-06-25 23:08:34,224 - __main__ - INFO - 4단계: HyperClova X 파인튜닝 형식 생성
+2025-06-25 23:08:34,224 - src.collector.time_llm_converter - INFO - HyperClova X 파인튜닝 형식으로 변환 중...
+2025-06-25 23:08:34,244 - src.collector.time_llm_converter - INFO - HyperClova X 형식 변환 완료: 67855개 샘플
+2025-06-25 23:08:35,262 - __main__ - INFO - HyperClova X 튜닝 데이터 저장: data/time_llm_format/hyperclova_x_tuning_data.json

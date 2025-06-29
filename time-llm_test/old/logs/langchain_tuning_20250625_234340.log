@@ -1,0 +1,12 @@
+2025-06-25 23:43:40,505 - __main__ - INFO - 1단계: LangChain 데이터 처리기 초기화
+2025-06-25 23:43:40,505 - __main__ - INFO - 2단계: LangChain 튜닝 데이터 준비
+2025-06-25 23:43:40,505 - src.langchain_integration.time_llm_data_processor - INFO - LangChain 튜닝 데이터 준비 중: data/time_llm_format/hyperclova_x_tuning_data.json
+2025-06-25 23:43:41,115 - src.langchain_integration.time_llm_data_processor - INFO - LangChain 튜닝 데이터 준비 완료: 67855개 샘플
+2025-06-25 23:43:41,122 - __main__ - INFO - 3단계: LangChain 튜닝 파일 저장
+2025-06-25 23:43:42,334 - src.langchain_integration.time_llm_data_processor - INFO - LangChain 튜닝 파일 저장 완료: data/langchain_tuning/time_llm_tuning_20250625_234341.jsonl
+2025-06-25 23:43:42,335 - __main__ - INFO - 4단계: LangChain 튜닝 클라이언트 초기화
+2025-06-25 23:43:42,335 - src.langchain_integration.hyperclova_tuning_client - INFO - LangChain HyperClova X 튜닝 클라이언트 초기화 완료 (Bearer 토큰 방식)
+2025-06-25 23:43:42,335 - __main__ - INFO - 5단계: 튜닝 파일 업로드
+2025-06-25 23:43:42,336 - src.langchain_integration.hyperclova_tuning_client - INFO - 튜닝 파일 업로드 시작: data/langchain_tuning/time_llm_tuning_20250625_234341.jsonl
+2025-06-25 23:43:47,272 - src.langchain_integration.hyperclova_tuning_client - ERROR - 파일 업로드 오류: 파일 업로드 실패: 404 - {"status":{"code":"40400","message":"Not Found"},"result":null}
+2025-06-25 23:43:47,272 - __main__ - ERROR - LangChain 파인튜닝 과정 중 오류 발생: 파일 업로드 실패: 404 - {"status":{"code":"40400","message":"Not Found"},"result":null}
