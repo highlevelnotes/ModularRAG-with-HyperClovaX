@@ -97,43 +97,7 @@
 
 
 ## RAG Architecture
-![Image](https://github.com/user-attachments/assets/6c146da3-ec08-479f-b328-05001c41b698)
-![Image](https://github.com/user-attachments/assets/ea56c403-18ae-405d-aa5c-f2467d3b3a58)
-
-<br>
-<br>
-
-## 검색 수행 결과
-> ### 📍 시연 영상
-> [![Video Label](http://img.youtube.com/vi/kbU95wzck3s/0.jpg)](https://youtu.be/kbU95wzck3s)
-
-<br>
-
-### 💬 "2주전 은행채 발행액은?" <br>
-![Image](https://github.com/user-attachments/assets/2fb82ddf-7ffb-4205-9d47-b8cb78391b42)
-
-<br>
-
-### 💬 "2025년 1월 24일과 2025년 1월 17일의 국공채 시장 동향을 비교하시오." <br>
-![Image](https://github.com/user-attachments/assets/0488645a-7bf5-4d22-ba0c-ca64e2f8510d)
-
-<br>
-
-### 💬 "지난 달 은행채 발행액 총액은?" <br>
-![Image](https://github.com/user-attachments/assets/32eb0665-5a87-4e50-a60a-f1082805b160)
-
-- 실제 12월 1 - 4주차 은행채 발행액 정보 <br>
-![Image](https://github.com/user-attachments/assets/874940de-357f-4ea1-895f-72aa83bdc4bf)
-
-<br>
-
-### "💬 1101호 요약해줘." <br>
-![Image](https://github.com/user-attachments/assets/81d0e217-7f84-4de7-bb3d-a016313330af)
-
-<br>
-
-### 💬 "다음달 회사채 시장과 스프레드 전망 알려줘." <br>
-![Image](https://github.com/user-attachments/assets/24df717f-cda2-48fd-a7fa-816d48031316)
+![Image](https://github.com/user-attachments/assets/e99f2929-f148-487e-98d9-2cefd858c419)
 
 <br>
 <br>
